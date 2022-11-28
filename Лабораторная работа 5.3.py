@@ -10,6 +10,7 @@ def get_sit():
     r = requests.get(
         f"https://newsapi.org/v2/everything?q={x}&from=2022-11-27&to=2022-11-27&sortBy=popularity&apiKey={token}")
     data = r.json()
+    # pprint(data)
     count = data['totalResults']
     if count > 0:
         print(f"Найдено {count} статей, выпущенных за вчерашний день, сколько вы хотите увидеть?")
